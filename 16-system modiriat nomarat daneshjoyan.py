@@ -9,19 +9,16 @@ students = [
 
 total_score= 0
 rejected_list= []
-
+high_score= 0
 for name,age,score in students:
     print(f'name:{name}, age:{age}, score:{score}')
     total_score= total_score + score
     if score < 10:
         rejected_list.append(name)
-print(f'{rejected_list}, your scores are less than 10.')
-
-high_score= 0
-for name,age,score in students:        
     if score > high_score:
         high_score = score
         top_name = name
+print(f'{rejected_list}, your scores are less than 10.')
 print(f'{top_name}, you have highest score.')
 
 average = total_score / len(students)
